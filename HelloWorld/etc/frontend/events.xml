@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="magenest_event">
+        <observer name="my_event" instance="Magenest\HelloWorld\Observer\MagenestObserver" />
+    </event>
+    <!-- <event name="customer_register_success">
+        <observer name="change_last_name" instance="Magenest\HelloWorld\Observer\ChangeNameObserver"/>
+    </event> -->
+</config>

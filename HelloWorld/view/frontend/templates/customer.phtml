@@ -1,0 +1,65 @@
+<h2 id="ok">Jquery</h2>
+<!-- <form id="form1">
+    <label>Email:</label>
+    <input type="email" name="emai"/>
+    <label>Password:</label>
+    <input type="password" name="password"/>
+</form> -->
+<button id="click">Alert by Jquery</button>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'prototype'
+    ], function(jQuery){
+    jQuery('#click').click(function () {
+        alert('Hello');
+
+    });
+    });
+</script>
+<button id="modal" class="Alert_model">Alert model</button>
+<script>
+require([
+    'jquery',
+    'Magento_Ui/js/modal/alert'
+], function ($, alert) {
+    'use strict';
+
+    $('#modal').click(function (){
+        alert({
+            title: 'Magenest',
+            content: '<form><label>Email</label><input type="email"/><label>Password</label><input type="password"/></form>',
+            modalClass: 'alert',
+            actions: {
+                always: function() {
+                    // do something when the modal is closed
+                }
+            },
+            buttons: [{
+                text: $.mage.__('Sign in'),
+                class: 'action primary accept',
+
+                /**
+                 * Click handler.
+                 */
+                click: function () {
+                    this.closeModal(true);
+                }
+            }, {
+                text: $.mage.__('Back'),
+                class: 'action',
+
+                /**
+                 * Click handler.
+                 */
+                click: function () {
+                    // New action
+                    this.closeModal(true);
+
+                }
+            }]
+    });
+    });
+    
+});
+</script>
